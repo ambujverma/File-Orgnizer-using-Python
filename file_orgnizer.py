@@ -1,7 +1,7 @@
 import os
 import shutil
 
-path  = 'C:/Users/ILOVEYOU/Desktop/doc/'
+path  = 'C:/Users/Desktop/doc/'  # your directory
 names = os.listdir(path)
 extension_set = set()
 
@@ -21,7 +21,6 @@ for file in names:
     ext = file.split(sep='.')
     if len(ext)>1:
         if ext[1] in file and not os.path.exists(path+ext[1]+'/'+file):
-            print(0)
             shutil.move(path+file,path+ext[1]+'/'+file)
  
     
